@@ -43,11 +43,3 @@ pub struct WalletWhitelist {
 impl WalletWhitelist {
     pub const SIZE: usize = 32 + 32 + 4 + 1 + 1 + 2;
 }
-
-#[derive(AnchorSerialize, AnchorDeserialize, Clone, Default, Debug)]
-pub struct WalletWhitelistData {
-    pub candy_machine_id: Pubkey,
-    pub whitelisted_address: Pubkey,
-    pub whitelist_type: WLType,
-    pub number_of_whitelist_spots: u8,
-}
