@@ -21,6 +21,7 @@ pub fn handler(ctx: Context<CreateWhitelistAccount>, data: WalletWhitelistData) 
     let wallet_whitelist_account = &mut ctx.accounts.wallet_whitelist_account;
     wallet_whitelist_account.candy_machine_id = data.candy_machine_id;
     wallet_whitelist_account.whitelisted_address = data.whitelisted_address;
+    wallet_whitelist_account.whitelist_type = data.whitelist_type;
     wallet_whitelist_account.number_of_whitelist_spots = data.number_of_whitelist_spots;
     wallet_whitelist_account.bump = *ctx.bumps.get("wallet_whitelist_account").unwrap();
     Ok(())

@@ -1,6 +1,7 @@
 use crate::error::ErrorCode;
 use crate::state::*;
 use anchor_lang::prelude::*;
+
 #[derive(Accounts)]
 pub struct DecreaseWhitelistSpots<'info> {
     #[account(mut,

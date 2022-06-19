@@ -1,8 +1,8 @@
 use instructions::*;
-use state::*;
 
 pub mod error;
 pub mod instructions;
+use state::wallet_whitelist::WalletWhitelistData;
 pub mod state;
 
 use anchor_lang::prelude::*;
