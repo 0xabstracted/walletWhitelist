@@ -2,7 +2,6 @@ use instructions::*;
 
 pub mod error;
 pub mod instructions;
-use state::wallet_whitelist::WLType;
 pub mod state;
 
 use anchor_lang::prelude::*;
@@ -17,7 +16,7 @@ pub mod wallet_whitelisting_for_minting {
         ctx: Context<CreateWhitelistAccount>,
         candy_machine_id: Pubkey,
         whitelisted_address: Pubkey,
-        whitelist_type: WLType,
+        whitelist_type: String,
         number_of_whitelist_spots: u8,
     ) -> Result<()> {
         instructions::create_whitelist_account::handler(

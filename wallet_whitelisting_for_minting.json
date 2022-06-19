@@ -32,9 +32,7 @@
         },
         {
           "name": "whitelistType",
-          "type": {
-            "defined": "WLType"
-          }
+          "type": "string"
         },
         {
           "name": "numberOfWhitelistSpots",
@@ -145,6 +143,11 @@
       "code": 6001,
       "name": "InvalidNumberofWL",
       "msg": "Can't decerease as the count is more than number of available spots."
+    },
+    {
+      "code": 6002,
+      "name": "InvalidWLType",
+      "msg": "WLType is invalid."
     }
   ],
   "metadata": {

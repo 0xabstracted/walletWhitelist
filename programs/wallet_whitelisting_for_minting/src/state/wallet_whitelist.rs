@@ -12,13 +12,6 @@ pub enum WLType {
     One,
     Null,
 }
-// pub enum WLType {
-//     Four(String),
-//     Three(String),
-//     Two(String),
-//     One(String),
-//     Null(String),
-// }
 
 impl fmt::Display for WLType {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {

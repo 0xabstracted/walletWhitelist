@@ -6,4 +6,6 @@ pub enum ErrorCode {
     NotEnoughBalance,
     #[msg("Can't decerease as the count is more than number of available spots.")]
     InvalidNumberofWL,
+    #[msg("WLType is invalid.")]
+    InvalidWLType,
 }
