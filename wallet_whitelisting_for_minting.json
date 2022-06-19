@@ -23,10 +23,22 @@
       ],
       "args": [
         {
-          "name": "data",
+          "name": "candyMachineId",
+          "type": "publicKey"
+        },
+        {
+          "name": "whitelistedAddress",
+          "type": "publicKey"
+        },
+        {
+          "name": "whitelistType",
           "type": {
-            "defined": "WalletWhitelistData"
+            "defined": "WLType"
           }
+        },
+        {
+          "name": "numberOfWhitelistSpots",
+          "type": "u8"
         }
       ]
     },
@@ -99,32 +111,6 @@
     }
   ],
   "types": [
-    {
-      "name": "WalletWhitelistData",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "candyMachineId",
-            "type": "publicKey"
-          },
-          {
-            "name": "whitelistedAddress",
-            "type": "publicKey"
-          },
-          {
-            "name": "whitelistType",
-            "type": {
-              "defined": "WLType"
-            }
-          },
-          {
-            "name": "numberOfWhitelistSpots",
-            "type": "u8"
-          }
-        ]
-      }
-    },
     {
       "name": "WLType",
       "type": {
