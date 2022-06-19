@@ -2,7 +2,9 @@ use anchor_lang::prelude::*;
 use std::fmt;
 use std::fmt::Debug;
 
-#[derive(Debug, Clone, AnchorDeserialize, AnchorSerialize)]
+#[proc_macros::assert_size(4)]
+#[repr(C)]
+#[derive(Debug, Clone, Copy, AnchorDeserialize, AnchorSerialize)]
 pub enum WLType {
     Four,
     Three,
@@ -29,15 +31,17 @@ impl Default for WLType {
     }
 }
 
+#[proc_macros::assert_size(72)]
+#[repr(C)]
 #[account]
 #[derive(Default, Debug)]
 pub struct WalletWhitelist {
-    pub candy_machine_id: Pubkey,
-    pub whitelisted_address: Pubkey,
-    pub whitelist_type: WLType,
-    pub number_of_whitelist_spots: u8,
-    pub bump: u8,
-    _reserved: [u8; 2],
+    pub candy_machine_id: Pubkey,      //32
+    pub whitelisted_address: Pubkey,   //32
+    pub whitelist_type: WLType,        //4
+    pub number_of_whitelist_spots: u8, //1
+    pub bump: u8,                      //1
+    _reserved: [u8; 2],                //2
 }
 
 impl WalletWhitelist {
