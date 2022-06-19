@@ -1,19 +1,31 @@
+use anchor_lang::prelude::*;
+use std::fmt;
 use std::fmt::Debug;
 
-use anchor_lang::prelude::*;
-
-#[derive(Debug, Clone, Copy, AnchorDeserialize, AnchorSerialize)]
+#[derive(Debug, Clone, AnchorDeserialize, AnchorSerialize)]
 pub enum WLType {
-    FOUR,
-    THREE,
-    TWO,
-    ONE,
-    NULL,
+    Four,
+    Three,
+    Two,
+    One,
+    Null,
 }
+// pub enum WLType {
+//     Four(String),
+//     Three(String),
+//     Two(String),
+//     One(String),
+//     Null(String),
+// }
 
+impl fmt::Display for WLType {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{:?}", self)
+    }
+}
 impl Default for WLType {
     fn default() -> Self {
-        WLType::NULL
+        WLType::Null
     }
 }
 

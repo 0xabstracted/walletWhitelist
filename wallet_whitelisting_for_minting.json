@@ -131,19 +131,19 @@
         "kind": "enum",
         "variants": [
           {
-            "name": "FOUR"
+            "name": "Four"
           },
           {
-            "name": "THREE"
+            "name": "Three"
           },
           {
-            "name": "TWO"
+            "name": "Two"
           },
           {
-            "name": "ONE"
+            "name": "One"
           },
           {
-            "name": "NULL"
+            "name": "Null"
           }
         ]
       }
