@@ -56,7 +56,7 @@
         {
           "name": "whitelistedAddress",
           "isMut": false,
-          "isSigner": false
+          "isSigner": true
         }
       ],
       "args": [

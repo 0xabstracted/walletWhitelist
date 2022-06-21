@@ -6,7 +6,7 @@ use crate::state::*;
 pub struct CreateWhitelistAccount<'info> {
     #[account(init_if_needed, 
         payer = payer, 
-        //space = 8 + std::mem::size_of::<WalletWhitelist>,
+        // space = 8 + std::mem::size_of::<WalletWhitelist>,
         space = 8 + WalletWhitelist::SIZE,
         seeds = [b"wallet-whitelist".as_ref(), whitelist_type.to_string().as_bytes(), whitelisted_address.as_ref(), candy_machine_id.as_ref()], 
         bump
