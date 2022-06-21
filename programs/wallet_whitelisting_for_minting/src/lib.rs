@@ -6,7 +6,7 @@ pub mod state;
 
 use anchor_lang::prelude::*;
 
-declare_id!("2EKXS53suVyMEn4nsRGSSY167vJ9PGeLR1b7dwzamqkX");
+declare_id!("Gw15av5isAPEqAr53uTcxqr5Bu4rFnN2STrrya8Bmkp5");
 
 #[program]
 pub mod wallet_whitelisting_for_minting {

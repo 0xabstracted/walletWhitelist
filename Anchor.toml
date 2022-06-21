@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.devnet]
-wallet_whitelisting_for_minting = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+wallet_whitelisting_for_minting = "Gw15av5isAPEqAr53uTcxqr5Bu4rFnN2STrrya8Bmkp5"
 
 [registry]
 url = "https://anchor.projectserum.com"
