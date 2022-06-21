@@ -16,8 +16,8 @@ pub struct DecreaseWhitelistSpots<'info> {
     pub candy_machine_id: AccountInfo<'info>,
     /// CHECK:
     #[account(constraint = wallet_whitelist_account.whitelisted_address == whitelisted_address.key())]
-    // pub whitelisted_address: AccountInfo<'info>,
-    pub whitelisted_address: Signer<'info>,
+    pub whitelisted_address: AccountInfo<'info>,
+    // pub whitelisted_address: Signer<'info>,
 }
 
 pub fn handler(ctx: Context<DecreaseWhitelistSpots>, count: u8) -> Result<()> {
